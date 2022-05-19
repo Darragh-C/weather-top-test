@@ -3,6 +3,10 @@
 
 #{menu id:"dashboard"/}
 
+<header class="ui header">
+  ${member.firstname} ${member.lastname}'s stations
+</header>
+
 #{list items:stations, as:'station'}
   <section class="ui segment">
     <h2 class="ui header">

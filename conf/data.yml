@@ -43,9 +43,13 @@ Member(m1):
   lastname: Mannion
   email: teresa@manion.com
   password: secret
+  stations:
+    - s1
 
 Member(m2):
   firstname: Evelyn
   lastname: Cusack
   email: evelyn@cusack.com
   password: secret
+  stations:
+    - s2
