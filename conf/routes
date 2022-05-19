@@ -9,6 +9,8 @@ GET     /about                                  About.index
 POST    /dashboard/addstation                   Dashboard.addStation
 GET     /stations/{id}                          StationCtrl.index
 POST    /stations/{id}/addreading               StationCtrl.addReading
+GET    /signup                                  Accounts.signup
+GET    /login                                   Accounts.login
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

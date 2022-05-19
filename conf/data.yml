@@ -37,3 +37,15 @@ Station(s2):
   readings:
     - r3
     - r4
+
+Member(m1):
+  firstname: Teresa
+  lastname: Mannion
+  email: teresa@manion.com
+  password: secret
+
+Member(m2):
+  firstname: Evelyn
+  lastname: Cusack
+  email: evelyn@cusack.com
+  password: secret
