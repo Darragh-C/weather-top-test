@@ -15,10 +15,14 @@ public class Station extends Model
     public String name;
     @OneToMany(cascade = CascadeType.ALL)
     public List<Reading> readings = new ArrayList<Reading>();
+    public double latitude;
+    public double longitude;
 
 
-    public Station(String name)
+    public Station(String name, double longitude, double latitude)
     {
         this.name = name;
+        this.longitude = longitude;
+        this.latitude = latitude;
     }
 }
