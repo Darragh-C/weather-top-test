@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9b0c215-2a49-4933-b4c7-47b5def40740" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Station.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/addstation.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/addstation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/data.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/latestweather.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/latestweather.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather-top-1-1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/weather-top-1-1.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652943741773</updated>
       <workItem from="1652943743293" duration="5136000" />
-      <workItem from="1653026530835" duration="2931000" />
+      <workItem from="1653026530835" duration="4762000" />
     </task>
     <servers />
   </component>
