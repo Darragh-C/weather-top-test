@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class StationAnalytics 
 {
-    private HashMap<Integer, String> weatherCodeMap;
+    private static HashMap<Integer, String> weatherCodeMap;
 
     public static double getCelsiusToFahrenheit(Reading reading)
     {
@@ -146,7 +146,7 @@ public class StationAnalytics
         else return "Not within range";
     }
 
-    public String weatherCondition(Reading reading)
+    public static String getWeatherCondition(Reading reading)
     {
         weatherCodeMap = new HashMap<Integer, String>();
         fillWeatherCodeMap();
@@ -154,7 +154,7 @@ public class StationAnalytics
         return weatherCodeMap.get(index);
     }
 
-    private void fillWeatherCodeMap(){
+    private static void fillWeatherCodeMap(){
         weatherCodeMap.put(100,"Clear");
         weatherCodeMap.put(200,"Partial clouds");
         weatherCodeMap.put(300,"Cloudy");
