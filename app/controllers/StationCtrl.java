@@ -6,6 +6,7 @@ import java.util.List;
 
 import models.Reading;
 import models.Station;
+import utils.StationAnalytics;
 
 import static play.mvc.Controller.redirect;
 
@@ -16,7 +17,16 @@ public class StationCtrl extends Controller {
         
         Station station = Station.findById(id);
         Logger.info ("Station id = " + id);
-        render("station.html", station);
+
+        Reading latestReading = null;
+        if (station.readings.size() > 0) 
+        {
+            latestReading = station.readings.get(station.readings.size()-1);
+        }
+        
+        render("station.html", station, latestReading);
+       
+        
     }
     public static void addReading(Long id, int code, double temperature, double windSpeed, long pressure, int windDirection)
     {

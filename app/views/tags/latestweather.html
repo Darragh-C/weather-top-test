@@ -6,6 +6,7 @@
 
                 <br>
                 Lat: ${_station.latitude}
+                <br>
                 Lng: ${_station.longitude}
             </div>
         </div>
@@ -14,26 +15,26 @@
                 <h3>Weather</h3>
                 <br>
                 <br>
-                ${StationAnalytics.latestReading.weatherCondition()}
+                ${_latestReading.weatherCondition()}
             </div>
         </div>
         <div class="column">
             <div class="ui segment">
                 <h3>Temp</h3>
                 <br>
-                ${StationAnalytics.latestReading.temperature} C
+                ${_latestReading.temperature} C
                 <br>
-                ${StationAnalytics.latestReading.celsiusToFahrenheit()} F
+                ${_latestReading.celsiusToFahrenheit()} F
             </div>
         </div>
         <div class="column">
             <div class="ui segment">
                 <h3>Wind</h3>
-                ${StationAnalytics.latestReading.beaufortSelector()} bft
+                ${_latestReading.beaufortSelector()} bft
                 <br>
-                ${StationAnalytics.latestReading.windDirection()}
+                ${_latestReading.windDirection()}
                 <br>
-                Feels like: ${StationAnalytics.latestReading.windChillCalc().round(2)}
+                Feels like: ${_latestReading.windChillCalc().round(2)}
             </div>
         </div>
         <div class="column">
@@ -41,8 +42,9 @@
                 <h3>Pressure</h3>
                 <br>
                 <br>
-                ${StationAnalytics.latestReading.pressure} hPa
+                ${_latestReading.pressure} hPa
             </div>
         </div>
+
     </div>
 </div>
