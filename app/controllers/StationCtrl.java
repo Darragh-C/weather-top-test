@@ -24,7 +24,9 @@ public class StationCtrl extends Controller {
             latestReading = station.readings.get(station.readings.size()-1);
         }
         
-        render("station.html", station, latestReading);
+        double fahrenheit = StationAnalytics.getCelsiusToFahrenheit(latestReading);
+        
+        render("station.html", station, latestReading, fahrenheit);
        
         
     }

@@ -8,16 +8,11 @@ import java.util.HashMap;
 public class StationAnalytics 
 {
     private HashMap<Integer, String> weatherCodeMap;
-    public static Reading getLatestReading(List<Reading> readings)
+
+    public static double getCelsiusToFahrenheit(Reading reading)
     {
-        Reading latestReading = null;
-        
-        if (readings.size() > 0) 
-        {
-            latestReading = readings.get(readings.size() -1);
-        }
-        
-        return latestReading;
+        double celsius = reading.temperature;
+        return celsius * (9/5) + 32;
     }
 
     public String weatherCondition(Reading reading)
