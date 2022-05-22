@@ -45,58 +45,7 @@ public class Reading extends Model
         weatherCodeMap.put(800,"Thunder");
     }
 
-    public int beaufortSelector() {
-        double wind = this.windSpeed;
-        if (wind <= 1)
-        {
-            return 0;
-        }
-        if (wind > 1 && wind <= 5)
-        {
-            return 1;
-        }
-        if (wind >= 6 && wind <= 11)
-        {
-            return 2;
-        }
-        if (wind >= 12 && wind <= 19)
-        {
-            return 3;
-        }
-        if (wind >= 20 && wind <= 28)
-        {
-            return 4;
-        }
-        if (wind >= 29 && wind <= 38)
-        {
-            return 5;
-        }
-        if (wind >= 39 && wind <= 49)
-        {
-            return 6;
-        }
-        if (wind >= 50 && wind <= 61)
-        {
-            return 7;
-        }
-        if (wind >= 62 && wind <= 74)
-        {
-            return 8;
-        }
-        if (wind >= 75 && wind <= 88)
-        {
-            return 9;
-        }
-        if (wind >= 89 && wind <= 102)
-        {
-            return 10;
-        }
-        if (wind >= 103 && wind <= 117)
-        {
-            return 11;
-        }
-        else return 999;
-    }
+    
 
     private String windDirection()
     {

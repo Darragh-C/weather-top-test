@@ -27,8 +27,9 @@ public class StationCtrl extends Controller {
         double fahrenheit = StationAnalytics.getCelsiusToFahrenheit(latestReading);
         double windChill = StationAnalytics.getWindChillCalc(latestReading);
         int beaufort = StationAnalytics.getBeaufortSelector(latestReading);
+        String windDirection = StationAnalytics.getWindDirection(latestReading);
         
-        render("station.html", station, latestReading, fahrenheit, windChill, beaufort);
+        render("station.html", station, latestReading, fahrenheit, windChill, beaufort, windDirection);
        
         
     }

@@ -76,6 +76,76 @@ public class StationAnalytics
         else return 999;
     }
 
+    public static String getWindDirection(Reading reading)
+    {
+        int windDir = reading.windDirection;
+        if (windDir >= 348.75 || windDir < 11.25)
+        {
+            return "North";
+        }
+        if (windDir >= 11.25 && windDir < 33.75)
+        {
+            return "North North East";
+        }
+        if (windDir >= 33.75 && windDir < 56.25)
+        {
+            return "North East";
+        }
+        if (windDir >= 56.25 && windDir < 78.75)
+        {
+            return "East North East";
+        }
+        if (windDir >= 78.75 && windDir < 101.25)
+        {
+            return "East";
+        }
+        if (windDir >= 101.25 && windDir < 123.75)
+        {
+            return "East South East";
+        }
+        if (windDir >= 123.75 && windDir < 146.25)
+        {
+            return "South East";
+        }
+        if (windDir >= 146.25 && windDir < 168.75)
+        {
+            return "South South East";
+        }
+        if (windDir >= 168.75 && windDir < 191.25)
+        {
+            return "South";
+        }
+        if (windDir >= 191.25 && windDir < 213.75)
+        {
+            return "South South West";
+        }
+        if (windDir >= 213.75 && windDir < 236.25)
+        {
+            return "South West";
+        }
+        if (windDir >= 236.25 && windDir < 258.75)
+        {
+            return "West South West";
+        }
+        if (windDir >= 258.75 && windDir < 281.25)
+        {
+            return "West";
+        }
+        if (windDir >= 281.25 && windDir < 303.75)
+        {
+            return "West North West";
+        }
+        if (windDir >= 303.75 && windDir < 326.25)
+        {
+            return "North West";
+        }
+        if (windDir >= 326.25 && windDir < 348.75)
+        {
+            return "North North West";
+        }
+        else return "Not within range";
+    }
+
     public String weatherCondition(Reading reading)
     {
         weatherCodeMap = new HashMap<Integer, String>();
