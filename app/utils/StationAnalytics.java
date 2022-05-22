@@ -15,6 +15,14 @@ public class StationAnalytics
         return celsius * (9/5) + 32;
     }
 
+    public static double getWindChillCalc(Reading reading)
+    {
+        double t = reading.temperature;
+        double v = reading.windSpeed;
+
+        return 13.12 + (0.6215 * t) - (11.37 * (Math.pow(v, 0.16))) + ((0.3965 * t)*(Math.pow(v, 0.16)));
+    }
+
     public String weatherCondition(Reading reading)
     {
         weatherCodeMap = new HashMap<Integer, String>();

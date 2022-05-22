@@ -45,12 +45,6 @@ public class Reading extends Model
         weatherCodeMap.put(800,"Thunder");
     }
 
-    public double celsiusToFahrenheit()
-    {
-        double celsius = this.temperature;
-        return celsius * (9/5) + 32;
-    }
-
     public int beaufortSelector() {
         double wind = this.windSpeed;
         if (wind <= 1)
@@ -174,11 +168,5 @@ public class Reading extends Model
         else return "Not within range";
     }
 
-    public double windChillCalc()
-    {
-        double t = this.temperature;
-        double v = this.windSpeed;
 
-        return 13.12 + (0.6215 * t) - (11.37 * (Math.pow(v, 0.16))) + ((0.3965 * t)*(Math.pow(v, 0.16)));
-    }
 }
