@@ -29,8 +29,9 @@ public class StationCtrl extends Controller {
         int beaufort = StationAnalytics.getBeaufortSelector(latestReading);
         String windDirection = StationAnalytics.getWindDirection(latestReading);
         String weatherCondition = StationAnalytics.getWeatherCondition(latestReading);
+        String weatherIcon = StationAnalytics.getWeatherIcon(latestReading);
         
-        render("station.html", station, latestReading, fahrenheit, windChill, beaufort, windDirection, weatherCondition);
+        render("station.html", station, latestReading, fahrenheit, windChill, beaufort, windDirection, weatherCondition, weatherIcon);
        
         
     }

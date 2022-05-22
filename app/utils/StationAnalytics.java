@@ -8,6 +8,7 @@ import java.util.HashMap;
 public class StationAnalytics 
 {
     private static HashMap<Integer, String> weatherCodeMap;
+    private static HashMap<Integer, String> weatherIconMap;
 
     public static double getCelsiusToFahrenheit(Reading reading)
     {
@@ -163,6 +164,25 @@ public class StationAnalytics
         weatherCodeMap.put(600,"Rain");
         weatherCodeMap.put(700,"Snow");
         weatherCodeMap.put(800,"Thunder");
+    }
+
+    public static String getWeatherIcon(Reading reading)
+    {
+        weatherIconMap = new HashMap<Integer, String>();
+        fillWeatherIconMap();
+        int index = reading.code;
+        return weatherIconMap.get(index);
+    }
+
+    private static void fillWeatherIconMap(){
+        weatherIconMap.put(100,"sun icon");
+        weatherIconMap.put(200,"cloud sun icon");
+        weatherIconMap.put(300,"cloud icon");
+        weatherIconMap.put(400,"cloud sun rain icon");
+        weatherIconMap.put(500,"cloud showers heavy icon");
+        weatherIconMap.put(600,"cloud rain icon");
+        weatherIconMap.put(700,"snowflake outline icon");
+        weatherIconMap.put(800,"bolt icon");
     }
 
  
