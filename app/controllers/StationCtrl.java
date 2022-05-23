@@ -30,7 +30,7 @@ public class StationCtrl extends Controller {
         String windDirection = StationAnalytics.getWindDirection(latestReading);
         String weatherCondition = StationAnalytics.getWeatherCondition(latestReading);
         String weatherIcon = StationAnalytics.getWeatherIcon(latestReading);
-        
+
         render("station.html", station, latestReading, fahrenheit, windChill, beaufort, windDirection, weatherCondition, weatherIcon);
        
         
@@ -42,5 +42,16 @@ public class StationCtrl extends Controller {
         station.readings.add(reading);
         station.save();
         redirect ("/stations/" + id);
+    }
+
+    public static void deleteReading(Long id, Long readingid)
+    {
+        Station station = Station.findById(id);
+        Reading reading = Reading.findById(readingid);
+        Logger.info("Removing " + readingid + " from station " + id);
+        station.readings.remove(reading);
+        station.save();
+        reading.delete();
+        index(id);
     }
 }
