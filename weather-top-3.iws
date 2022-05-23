@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e9b0c215-2a49-4933-b4c7-47b5def40740" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/app/views/tags/addreading.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/addreading.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_addreading.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_addreading.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather-top-1-1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/weather-top-1-1.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
       <updated>1652943741773</updated>
       <workItem from="1652943743293" duration="5136000" />
       <workItem from="1653026530835" duration="35782000" />
-      <workItem from="1653295725671" duration="6638000" />
+      <workItem from="1653295725671" duration="6740000" />
     </task>
     <servers />
   </component>
