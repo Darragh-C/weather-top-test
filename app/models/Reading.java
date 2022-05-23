@@ -20,8 +20,8 @@ public class Reading extends Model
     public long minPressure;
     public double maxWindSpeed;
     public double minWindSpeed;
-
-    public Reading(int code, double temperature, double windSpeed, long pressure, int windDirection)
+    
+   public Reading(int code, double temperature, double windSpeed, long pressure, int windDirection)
     {
         this.code = code;
         this.temperature = temperature;
@@ -29,8 +29,7 @@ public class Reading extends Model
         this.pressure = pressure;
         this.windDirection = windDirection;
     }
-
-
+    
     public Reading(int code, double temperature, double windSpeed, long pressure, int windDirection, double maxTemperature, double minTemperature, long maxPressure, long minPressure, double maxWindSpeed, double minWindSpeed)
     {
         this.code = code;
@@ -45,6 +44,6 @@ public class Reading extends Model
         this.maxWindSpeed = maxWindSpeed;
         this.minWindSpeed = minWindSpeed;
     }
-   
+
     
 }

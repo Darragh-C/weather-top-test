@@ -35,9 +35,9 @@ public class StationCtrl extends Controller {
        
         
     }
-    public static void addReading(Long id, int code, double temperature, double windSpeed, long pressure, int windDirection)
+    public static void addReading(Long id, int code, double temperature, double windSpeed, long pressure, int windDirection, double maxTemperature, double minTemperature, long maxPressure, long minPressure, double maxWindSpeed, double minWindSpeed)
     {
-        Reading reading = new Reading(code, temperature, windSpeed, pressure, windDirection);
+        Reading reading = new Reading(code, temperature, windSpeed, pressure, windDirection, maxTemperature, minTemperature, maxPressure, minPressure, maxWindSpeed, minWindSpeed);
         Station station = Station.findById(id);
         station.readings.add(reading);
         station.save();
