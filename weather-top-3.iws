@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e9b0c215-2a49-4933-b4c7-47b5def40740" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/app/controllers/StationCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/StationCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Reading.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Reading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/StationAnalytics.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/StationAnalytics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/tags/displayreadings.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/displayreadings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather-top-3.iws" beforeDir="false" afterPath="$PROJECT_DIR$/weather-top-3.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +67,8 @@
       <workItem from="1652943743293" duration="5136000" />
       <workItem from="1653026530835" duration="35782000" />
       <workItem from="1653295725671" duration="6740000" />
-      <workItem from="1653314781746" duration="5637000" />
+      <workItem from="1653314781746" duration="6330000" />
+      <workItem from="1653376016915" duration="4076000" />
     </task>
     <servers />
   </component>

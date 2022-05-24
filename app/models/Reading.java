@@ -3,6 +3,9 @@ package models;
 import play.db.jpa.Model;
 import java.util.HashMap;
 
+import java.sql.Timestamp;
+import java.time.Instant;
+
 import javax.persistence.Entity;
 
 @Entity
@@ -20,6 +23,9 @@ public class Reading extends Model
     public long minPressure;
     public double maxWindSpeed;
     public double minWindSpeed;
+
+    Timestamp timestamp = Timestamp.from(Instant.now());
+
     
    public Reading(int code, double temperature, double windSpeed, long pressure, int windDirection)
     {
@@ -28,6 +34,7 @@ public class Reading extends Model
         this.windSpeed = windSpeed;
         this.pressure = pressure;
         this.windDirection = windDirection;
+
     }
     
     public Reading(int code, double temperature, double windSpeed, long pressure, int windDirection, double maxTemperature, double minTemperature, long maxPressure, long minPressure, double maxWindSpeed, double minWindSpeed)
@@ -43,7 +50,17 @@ public class Reading extends Model
         this.minPressure = minPressure;
         this.maxWindSpeed = maxWindSpeed;
         this.minWindSpeed = minWindSpeed;
+
     }
+
+    /*
+    public static Timestamp getReadableTime(Timestamp timestamp)
+    {
+        Timestamp readableTime = timestamp.toLocalDateTime();
+        return  readableTime;
+    }
+
+     */
 
     
 }

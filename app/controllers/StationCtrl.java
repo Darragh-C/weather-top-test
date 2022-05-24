@@ -31,6 +31,9 @@ public class StationCtrl extends Controller {
         String weatherCondition = StationAnalytics.getWeatherCondition(latestReading);
         String weatherIcon = StationAnalytics.getWeatherIcon(latestReading);
 
+        //Timestamp timestamp = StationAnalytics.getReadableTime(latestReading);
+
+
         render("station.html", station, latestReading, fahrenheit, windChill, beaufort, windDirection, weatherCondition, weatherIcon);
        
         

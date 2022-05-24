@@ -184,6 +184,14 @@ public class StationAnalytics
         weatherIconMap.put(700,"snowflake outline icon");
         weatherIconMap.put(800,"bolt icon");
     }
+    /*
+    public static Timestamp getReadableTime(Reading reading)
+    {
+        Timestamp timestamp = reading.timestamp;
+        Timestamp readableTime = timestamp.toLocalDateTime();
+        return  readableTime;
+    }
+     */
 
  
 }
