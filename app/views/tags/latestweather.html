@@ -30,8 +30,8 @@
             <div class="ui segment">
                 <i class="huge temperature low icon"></i>
                 <h3>Temp</h3>
-                <br>
-                <i class="huge ${_trend}"></i>
+                
+                <i class="huge ${_temperatureTrend}"></i>
                 <br>
                 ${_latestReading.temperature} C or ${_fahrenheit} F
                 <br>
@@ -44,6 +44,8 @@
             <div class="ui segment">
                 <i class="huge wind icon"></i>
                 <h3>Wind</h3>
+                <i class="huge ${_windSpeedTrend}"></i>
+                <br>
                 ${_beaufort} bft
                 <br>
                 Max: ${_latestReading.maxWindSpeed}
@@ -59,7 +61,7 @@
             <div class="ui segment">
                 <i class="huge tachometer alternate icon"></i>
                 <h3>Pressure</h3>
-                <br>
+                <i class="huge ${_pressureTrend}"></i>
                 <br>
                 ${_latestReading.pressure} hPa
                 <br>

@@ -17,7 +17,7 @@ Reading(r3):
   temperature: 8.0
   windSpeed: 1
   windDirection: 90
-  pressure: 1000
+  pressure: 1008
 
 Reading(r4):
   code: 200

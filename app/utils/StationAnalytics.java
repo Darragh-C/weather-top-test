@@ -186,29 +186,82 @@ public class StationAnalytics
         weatherIconMap.put(800,"bolt icon");
     }
     
-    public static String getTrendType(List<Reading> readings)
+    public static List<Reading> getLastThreeReadings(List<Reading> readings) 
     {
+        List<Reading> threeLatestReadings = new ArrayList<Reading>();
+        
         Reading lastReading = readings.get(readings.size()-1);
-        double lastMeasurement = lastReading.temperature;
         Reading secondLastReading = readings.get(readings.size()-2);
-        double secondLastMeasurement = secondLastReading.temperature;
         Reading thirdLastReading = readings.get(readings.size()-3);
-        double thirdLastMeasurement = thirdLastReading.temperature;
+        threeLatestReadings.add(thirdLastReading);
+        threeLatestReadings.add(secondLastReading);
+        threeLatestReadings.add(lastReading);
+        
+        return threeLatestReadings;
+    }
+
+    public static String getTemperatureTrend(List<Reading> readingsSlice)
+    {
+        
+        double lastMeasurement = readingsSlice.get(readingsSlice.size()-1).temperature;
+        double secondLastMeasurement = readingsSlice.get(readingsSlice.size()-2).temperature;
+        double thirdLastMeasurement = readingsSlice.get(readingsSlice.size()-3).temperature;
         
         if (lastMeasurement > secondLastMeasurement && secondLastMeasurement > thirdLastMeasurement)
         {
-            return "upward";
+            return "arrow up icon";
         }
         else if (lastMeasurement < secondLastMeasurement && secondLastMeasurement < thirdLastMeasurement)
         {
-            return "downward";
+            return "arrow down icon";
         }
         else
         {
-            return "none";
+            return "";
+        }
+    }
+    public static String getPressureTrend(List<Reading> readingsSlice)
+    {
+
+        double lastMeasurement = readingsSlice.get(readingsSlice.size()-1).pressure;
+        double secondLastMeasurement = readingsSlice.get(readingsSlice.size()-2).pressure;
+        double thirdLastMeasurement = readingsSlice.get(readingsSlice.size()-3).pressure;
+
+        if (lastMeasurement > secondLastMeasurement && secondLastMeasurement > thirdLastMeasurement)
+        {
+            return "arrow up icon";
+        }
+        else if (lastMeasurement < secondLastMeasurement && secondLastMeasurement < thirdLastMeasurement)
+        {
+            return "arrow down icon";
+        }
+        else
+        {
+            return "";
+        }
+    }
+    public static String getWindSpeedTrend(List<Reading> readingsSlice)
+    {
+
+        double lastMeasurement = readingsSlice.get(readingsSlice.size()-1).windSpeed;
+        double secondLastMeasurement = readingsSlice.get(readingsSlice.size()-2).windSpeed;
+        double thirdLastMeasurement = readingsSlice.get(readingsSlice.size()-3).windSpeed;
+
+        if (lastMeasurement > secondLastMeasurement && secondLastMeasurement > thirdLastMeasurement)
+        {
+            return "arrow up icon";
+        }
+        else if (lastMeasurement < secondLastMeasurement && secondLastMeasurement < thirdLastMeasurement)
+        {
+            return "arrow down icon";
+        }
+        else
+        {
+            return "";
         }
     }
 
+    /*
     public static String getTrendGraphic(String trendType)
     {
         if (trendType == "upward")
@@ -221,6 +274,11 @@ public class StationAnalytics
         }
         else return "";
     }
+    */
+
+
+   
+    
     
 
  
