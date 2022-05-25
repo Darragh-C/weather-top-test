@@ -29,8 +29,13 @@ public class StationCtrl extends Controller {
         String windDirection = StationAnalytics.getWindDirection(latestReading);
         String weatherCondition = StationAnalytics.getWeatherCondition(latestReading);
         String weatherIcon = StationAnalytics.getWeatherIcon(latestReading);
-        
-        boolean trend = StationAnalytics.checkForTrend(station.readings);
+
+        String trend = null;
+        if (station.readings.size() >= 3)
+        {
+            trend = StationAnalytics.getTrendGraphic(StationAnalytics.getTrendType(station.readings));
+        }
+
 
         render("station.html", station, latestReading, fahrenheit, windChill, beaufort, windDirection, weatherCondition, weatherIcon, trend);
        

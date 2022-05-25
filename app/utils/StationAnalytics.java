@@ -186,7 +186,7 @@ public class StationAnalytics
         weatherIconMap.put(800,"bolt icon");
     }
     
-    public static boolean checkForTrend(List<Reading> readings)
+    public static String getTrendType(List<Reading> readings)
     {
         Reading lastReading = readings.get(readings.size()-1);
         double lastMeasurement = lastReading.temperature;
@@ -197,12 +197,29 @@ public class StationAnalytics
         
         if (lastMeasurement > secondLastMeasurement && secondLastMeasurement > thirdLastMeasurement)
         {
-            return true;
+            return "upward";
+        }
+        else if (lastMeasurement < secondLastMeasurement && secondLastMeasurement < thirdLastMeasurement)
+        {
+            return "downward";
         }
         else
         {
-            return false;
+            return "none";
         }
+    }
+
+    public static String getTrendGraphic(String trendType)
+    {
+        if (trendType == "upward")
+        {
+            return "arrow up icon";
+        }
+        else if (trendType == "downward")
+        {
+            return "arrow down icon";
+        }
+        else return "";
     }
     
 
