@@ -3,6 +3,7 @@ package utils;
 import models.Reading;
 
 import java.util.List;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class StationAnalytics 
@@ -184,14 +185,26 @@ public class StationAnalytics
         weatherIconMap.put(700,"snowflake outline icon");
         weatherIconMap.put(800,"bolt icon");
     }
-    /*
-    public static Timestamp getReadableTime(Reading reading)
+    
+    public static boolean checkForTrend(List<Reading> readings)
     {
-        Timestamp timestamp = reading.timestamp;
-        Timestamp readableTime = timestamp.toLocalDateTime();
-        return  readableTime;
+        Reading lastReading = readings.get(readings.size()-1);
+        double lastMeasurement = lastReading.temperature;
+        Reading secondLastReading = readings.get(readings.size()-2);
+        double secondLastMeasurement = secondLastReading.temperature;
+        Reading thirdLastReading = readings.get(readings.size()-3);
+        double thirdLastMeasurement = thirdLastReading.temperature;
+        
+        if (lastMeasurement > secondLastMeasurement && secondLastMeasurement > thirdLastMeasurement)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-     */
+    
 
  
 }

@@ -26,6 +26,20 @@ Reading(r4):
   windDirection: 120
   pressure: 999
 
+Reading(r5):
+  code: 700
+  temperature: 8.0
+  windSpeed: 1
+  windDirection: 90
+  pressure: 1000
+
+Reading(r6):
+  code: 200
+  temperature: 0.5
+  windSpeed: 3.5
+  windDirection: 120
+  pressure: 999
+
 Station(s1):
   name: Tramore
   longitude: 52.16
@@ -33,14 +47,16 @@ Station(s1):
   readings:
     - r1
     - r2
+    - r3
 
 Station(s2):
   name: Dunmore
   longitude: 52.16
   latitude: 07.00
   readings:
-    - r3
     - r4
+    - r5
+    - r6
 
 Member(m1):
   firstname: Teresa

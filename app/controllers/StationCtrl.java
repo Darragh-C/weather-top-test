@@ -14,7 +14,6 @@ import static play.mvc.Controller.redirect;
 public class StationCtrl extends Controller {
     public static void index(Long id)
     {
-        
         Station station = Station.findById(id);
         Logger.info ("Station id = " + id);
 
@@ -30,11 +29,10 @@ public class StationCtrl extends Controller {
         String windDirection = StationAnalytics.getWindDirection(latestReading);
         String weatherCondition = StationAnalytics.getWeatherCondition(latestReading);
         String weatherIcon = StationAnalytics.getWeatherIcon(latestReading);
+        
+        boolean trend = StationAnalytics.checkForTrend(station.readings);
 
-        //Timestamp timestamp = StationAnalytics.getReadableTime(latestReading);
-
-
-        render("station.html", station, latestReading, fahrenheit, windChill, beaufort, windDirection, weatherCondition, weatherIcon);
+        render("station.html", station, latestReading, fahrenheit, windChill, beaufort, windDirection, weatherCondition, weatherIcon, trend);
        
         
     }

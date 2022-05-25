@@ -3,6 +3,8 @@ package controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import utils.StationAnalytics;
+
 import models.Member;
 import models.Station;
 import models.Reading;
@@ -15,7 +17,9 @@ public class Dashboard extends Controller
     Logger.info("Rendering Dashboard");
     Member member = Accounts.getLoggedInMember();
     List<Station> stations = member.stations;
-    render ("dashboard.html", member, stations);
+    
+    render("dashboard.html", member, stations);
+    
   }
 
   public static void addStation (String name, double longitude, double latitude)
