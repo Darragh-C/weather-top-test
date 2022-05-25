@@ -176,14 +176,14 @@ public class StationAnalytics
     }
 
     private static void fillWeatherIconMap(){
-        weatherIconMap.put(100,"sun icon");
-        weatherIconMap.put(200,"cloud sun icon");
-        weatherIconMap.put(300,"cloud icon");
-        weatherIconMap.put(400,"cloud sun rain icon");
-        weatherIconMap.put(500,"cloud showers heavy icon");
-        weatherIconMap.put(600,"cloud rain icon");
-        weatherIconMap.put(700,"snowflake outline icon");
-        weatherIconMap.put(800,"bolt icon");
+        weatherIconMap.put(100,"blue sun icon");
+        weatherIconMap.put(200,"blue cloud sun icon");
+        weatherIconMap.put(300,"blue cloud icon");
+        weatherIconMap.put(400,"blue cloud sun rain icon");
+        weatherIconMap.put(500,"blue cloud showers heavy icon");
+        weatherIconMap.put(600,"blue cloud rain icon");
+        weatherIconMap.put(700,"blue snowflake outline icon");
+        weatherIconMap.put(800,"blue bolt icon");
     }
     
     public static List<Reading> getLastThreeReadings(List<Reading> readings) 
@@ -209,11 +209,11 @@ public class StationAnalytics
         
         if (lastMeasurement > secondLastMeasurement && secondLastMeasurement > thirdLastMeasurement)
         {
-            return "arrow up icon";
+            return "green arrow up icon";
         }
         else if (lastMeasurement < secondLastMeasurement && secondLastMeasurement < thirdLastMeasurement)
         {
-            return "arrow down icon";
+            return "red arrow down icon";
         }
         else
         {
@@ -229,11 +229,11 @@ public class StationAnalytics
 
         if (lastMeasurement > secondLastMeasurement && secondLastMeasurement > thirdLastMeasurement)
         {
-            return "arrow up icon";
+            return "green arrow up icon";
         }
         else if (lastMeasurement < secondLastMeasurement && secondLastMeasurement < thirdLastMeasurement)
         {
-            return "arrow down icon";
+            return "red arrow down icon";
         }
         else
         {
@@ -249,11 +249,11 @@ public class StationAnalytics
 
         if (lastMeasurement > secondLastMeasurement && secondLastMeasurement > thirdLastMeasurement)
         {
-            return "arrow up icon";
+            return "green arrow up icon";
         }
         else if (lastMeasurement < secondLastMeasurement && secondLastMeasurement < thirdLastMeasurement)
         {
-            return "arrow down icon";
+            return "red arrow down icon";
         }
         else
         {

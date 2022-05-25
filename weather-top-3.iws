@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9b0c215-2a49-4933-b4c7-47b5def40740" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/StationCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/StationCtrl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/utils/StationAnalytics.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/StationAnalytics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/station.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/station.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/tags/latestweather.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/latestweather.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/data.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.StationCtrl" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.StationCtrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/utils.StationAnalytics" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/utils.StationAnalytics" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather-top-3.iws" beforeDir="false" afterPath="$PROJECT_DIR$/weather-top-3.iws" afterDir="false" />
     </list>
@@ -72,7 +68,7 @@
       <workItem from="1653295725671" duration="6740000" />
       <workItem from="1653314781746" duration="6330000" />
       <workItem from="1653376016915" duration="4649000" />
-      <workItem from="1653460890935" duration="21218000" />
+      <workItem from="1653460890935" duration="22068000" />
     </task>
     <servers />
   </component>
