@@ -14,19 +14,19 @@
         #{list items:_station.readings, as:'reading'}
             <tr>
                 <td>
-                    ${reading.timestamp}
+                    ${reading.getTimestamp()}
                 </td>
                 <td>
                     ${reading.getCode()}
                 </td>
                 <td>
-                    ${reading.temperature}
+                    ${reading.getTemperature()}
                 </td>
                 <td>
-                    ${reading.windSpeed}
+                    ${reading.getWindSpeed()}
                 </td>
                 <td>
-                    ${reading.pressure}
+                    ${reading.getPressure()}
                 </td>
                 <td>
                     <a href="/stations/${_station.id}/deletereading/${reading.id}" class="ui icon button">

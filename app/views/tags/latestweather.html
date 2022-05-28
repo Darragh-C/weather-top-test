@@ -3,10 +3,10 @@
         <div class="column">
             <div class="ui segment">
                 <i class="huge blue right floated map marker icon"></i>
-                <h3>${_station.name}</h3>
-                Lat: ${_station.latitude}
+                <h3>${_station.getName()}</h3>
+                Lat: ${_station.getLatitude()}
                 <br>
-                Lng: ${_station.longitude}
+                Lng: ${_station.getLongitude()}
                 <br>
                 <br>
                 <br>
@@ -30,11 +30,11 @@
                 <i class="huge blue temperature low icon"></i>
                 <i class="huge ${_temperatureTrend}"></i>
                 <h3>Temp</h3>
-                ${_latestReading.temperature} C or ${_fahrenheit} F
+                ${_latestReading.getTemperature()} C or ${_fahrenheit} F
                 <br>
-                Max: ${_latestReading.maxTemperature} C
+                Max: ${_latestReading.getMaxTemperature()} C
                 <br>
-                Min: ${_latestReading.minTemperature} C
+                Min: ${_latestReading.getMinTemperature()} C
                 <br>
                 <br>
                 <br>
@@ -47,9 +47,9 @@
                 <h3>Wind</h3>
                 ${_beaufort} bft
                 <br>
-                Max: ${_latestReading.maxWindSpeed}
+                Max: ${_latestReading.getWindSpeed()}
                 <br>
-                Min: ${_latestReading.minWindSpeed}
+                Min: ${_latestReading.getMinWindSpeed()}
                 <br>
                 ${_windDirection}
                 <br>
@@ -61,11 +61,11 @@
                 <i class="huge blue tachometer alternate icon"></i>
                 <i class="huge ${_pressureTrend}"></i>
                 <h3>Pressure</h3>
-                ${_latestReading.pressure} hPa
+                ${_latestReading.getPressure()} hPa
                 <br>
-                Max: ${_latestReading.maxPressure} hPa
+                Max: ${_latestReading.getMaxPressure()} hPa
                 <br>
-                Min: ${_latestReading.minPressure} hPa
+                Min: ${_latestReading.getMinPressure()} hPa
                 <br>
                 <br>
                 <br>
