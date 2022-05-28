@@ -36,4 +36,24 @@ public class Member extends Model
     {
         return this.password.equals(password);
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public List<Station> getStations() {
+        return stations;
+    }
 }

@@ -25,4 +25,20 @@ public class Station extends Model
         this.longitude = longitude;
         this.latitude = latitude;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<Reading> getReadings() {
+        return readings;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
 }

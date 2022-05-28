@@ -2,6 +2,10 @@ package utils;
 
 import models.Reading;
 
+import java.time.format.DateTimeFormatter;
+import java.time.*;
+import java.text.DateFormat;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -262,24 +266,12 @@ public class StationAnalytics
     }
 
     /*
-    public static String getTrendGraphic(String trendType)
+    public LocalDateTime getDate(String date)
     {
-        if (trendType == "upward")
-        {
-            return "arrow up icon";
-        }
-        else if (trendType == "downward")
-        {
-            return "arrow down icon";
-        }
-        else return "";
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        LocalDateTime formattedDate = LocalDateTime.parse(date, dtf);
+        return formattedDate;
     }
     */
-
-
-   
     
-    
-
- 
 }
