@@ -3,7 +3,7 @@
         <div class="row">
             <div class="column">
                 <div class="ui segment">
-                    <i class="huge blue right floated map marker icon"></i>
+                    <i class="huge grey right floated map marker icon"></i>
                     <h3>${_station.getName()}</h3>
                     Lat: ${_station.getLatitude()}
                     <br>
@@ -28,7 +28,7 @@
             </div>
             <div class="column">
                 <div class="ui segment">
-                    <i class="huge blue temperature low icon"></i>
+                    <i class="huge grey temperature low icon"></i>
                     <i class="huge ${_temperatureTrend}"></i>
                     <h3>Temp</h3>
                     ${_latestReading.getTemperature()} C or ${_fahrenheit} F
@@ -43,7 +43,7 @@
             </div>
             <div class="column">
                 <div class="ui segment">
-                    <i class="huge blue wind icon"></i>
+                    <i class="huge grey wind icon"></i>
                     <i class="huge ${_windSpeedTrend}"></i>
                     <h3>Wind</h3>
                     ${_beaufort} bft
@@ -59,7 +59,7 @@
             </div>
             <div class="column">
                 <div class="ui segment">
-                    <i class="huge blue tachometer alternate icon"></i>
+                    <i class="huge grey tachometer alternate icon"></i>
                     <i class="huge ${_pressureTrend}"></i>
                     <h3>Pressure</h3>
                     ${_latestReading.getPressure()} hPa
@@ -77,5 +77,5 @@
     </div>
 #{/if}
 #{else}
-<p> Add a reading to see the latest reading dashboard.</p>
+<p> Add a reading to see the latest readings dashboard.</p>
 #{/else}
