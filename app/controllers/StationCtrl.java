@@ -18,32 +18,38 @@ public class StationCtrl extends Controller {
         Logger.info ("Station id = " + id);
 
         Reading latestReading = null;
-        if (station.readings.size() > 0) 
+        if (station.readings.size() > 0)
         {
             latestReading = station.readings.get(station.readings.size()-1);
         }
-        
-        double fahrenheit = StationAnalytics.getCelsiusToFahrenheit(latestReading);
-        double windChill = StationAnalytics.getWindChillCalc(latestReading);
-        int beaufort = StationAnalytics.getBeaufortSelector(latestReading);
-        String windDirection = StationAnalytics.getWindDirection(latestReading);
-        String weatherCondition = StationAnalytics.getWeatherCondition(latestReading);
-        String weatherIcon = StationAnalytics.getWeatherIcon(latestReading);
-
+        double fahrenheit = 0.0;
+        double windChill = 0.0;
+        int beaufort = 0;
+        String windDirection = null;
+        String weatherCondition = null;
+        String weatherIcon = null;
         String temperatureTrend = null;
         String pressureTrend = null;
         String windSpeedTrend = null;
-        if (station.readings.size() >= 3)
-        {
-            temperatureTrend = StationAnalytics.getTemperatureTrend(StationAnalytics.getLastThreeReadings(station.readings));
-            pressureTrend = StationAnalytics.getPressureTrend(StationAnalytics.getLastThreeReadings(station.readings));
-            windSpeedTrend = StationAnalytics.getWindSpeedTrend(StationAnalytics.getLastThreeReadings(station.readings));
+
+        if (latestReading != null) {
+            fahrenheit = StationAnalytics.getCelsiusToFahrenheit(latestReading);
+            windChill = StationAnalytics.getWindChillCalc(latestReading);
+            beaufort = StationAnalytics.getBeaufortSelector(latestReading);
+            windDirection = StationAnalytics.getWindDirection(latestReading);
+            weatherCondition = StationAnalytics.getWeatherCondition(latestReading);
+            weatherIcon = StationAnalytics.getWeatherIcon(latestReading);
+            
+            if (station.readings.size() >= 3) {
+                temperatureTrend = StationAnalytics.getTemperatureTrend(StationAnalytics.getLastThreeReadings(station.readings));
+                pressureTrend = StationAnalytics.getPressureTrend(StationAnalytics.getLastThreeReadings(station.readings));
+                windSpeedTrend = StationAnalytics.getWindSpeedTrend(StationAnalytics.getLastThreeReadings(station.readings));
+            }
         }
 
-
         render("station.html", station, latestReading, fahrenheit, windChill, beaufort, windDirection, weatherCondition, weatherIcon, temperatureTrend, pressureTrend, windSpeedTrend);
-       
-        
+
+
     }
     public static void addReading(Long id, int code, double temperature, double windSpeed, long pressure, int windDirection, double maxTemperature, double minTemperature, long maxPressure, long minPressure, double maxWindSpeed, double minWindSpeed)
     {

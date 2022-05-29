@@ -1,77 +1,81 @@
-<div class="ui centered equal width grid">
-    <div class="row">
-        <div class="column">
-            <div class="ui segment">
-                <i class="huge blue right floated map marker icon"></i>
-                <h3>${_station.getName()}</h3>
-                Lat: ${_station.getLatitude()}
-                <br>
-                Lng: ${_station.getLongitude()}
-                <br>
-                <br>
-                <br>
-                <br>
+#{if _latestReading}
+    <div class="ui centered equal width grid">
+        <div class="row">
+            <div class="column">
+                <div class="ui segment">
+                    <i class="huge blue right floated map marker icon"></i>
+                    <h3>${_station.getName()}</h3>
+                    Lat: ${_station.getLatitude()}
+                    <br>
+                    Lng: ${_station.getLongitude()}
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
             </div>
-        </div>
-        <div class="column">
-            <div class="ui segment">
-                <i class="huge ${_weatherIcon}"></i>
-                <h3>Weather</h3>
-                ${_weatherCondition}
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+            <div class="column">
+                <div class="ui segment">
+                    <i class="huge ${_weatherIcon}"></i>
+                    <h3>Weather</h3>
+                    ${_weatherCondition}
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
             </div>
-        </div>
-        <div class="column">
-            <div class="ui segment">
-                <i class="huge blue temperature low icon"></i>
-                <i class="huge ${_temperatureTrend}"></i>
-                <h3>Temp</h3>
-                ${_latestReading.getTemperature()} C or ${_fahrenheit} F
-                <br>
-                Max: ${_latestReading.getMaxTemperature()} C
-                <br>
-                Min: ${_latestReading.getMinTemperature()} C
-                <br>
-                <br>
-                <br>
+            <div class="column">
+                <div class="ui segment">
+                    <i class="huge blue temperature low icon"></i>
+                    <i class="huge ${_temperatureTrend}"></i>
+                    <h3>Temp</h3>
+                    ${_latestReading.getTemperature()} C or ${_fahrenheit} F
+                    <br>
+                    Max: ${_latestReading.getMaxTemperature()} C
+                    <br>
+                    Min: ${_latestReading.getMinTemperature()} C
+                    <br>
+                    <br>
+                    <br>
+                </div>
             </div>
-        </div>
-        <div class="column">
-            <div class="ui segment">
-                <i class="huge blue wind icon"></i>
-                <i class="huge ${_windSpeedTrend}"></i>
-                <h3>Wind</h3>
-                ${_beaufort} bft
-                <br>
-                Max: ${_latestReading.getWindSpeed()}
-                <br>
-                Min: ${_latestReading.getMinWindSpeed()}
-                <br>
-                ${_windDirection}
-                <br>
-                Feels like: ${_windChill.round(2)}
+            <div class="column">
+                <div class="ui segment">
+                    <i class="huge blue wind icon"></i>
+                    <i class="huge ${_windSpeedTrend}"></i>
+                    <h3>Wind</h3>
+                    ${_beaufort} bft
+                    <br>
+                    Max: ${_latestReading.getWindSpeed()}
+                    <br>
+                    Min: ${_latestReading.getMinWindSpeed()}
+                    <br>
+                    ${_windDirection}
+                    <br>
+                    Feels like: ${_windChill.round(2)}
+                </div>
             </div>
-        </div>
-        <div class="column">
-            <div class="ui segment">
-                <i class="huge blue tachometer alternate icon"></i>
-                <i class="huge ${_pressureTrend}"></i>
-                <h3>Pressure</h3>
-                ${_latestReading.getPressure()} hPa
-                <br>
-                Max: ${_latestReading.getMaxPressure()} hPa
-                <br>
-                Min: ${_latestReading.getMinPressure()} hPa
-                <br>
-                <br>
-                <br>
+            <div class="column">
+                <div class="ui segment">
+                    <i class="huge blue tachometer alternate icon"></i>
+                    <i class="huge ${_pressureTrend}"></i>
+                    <h3>Pressure</h3>
+                    ${_latestReading.getPressure()} hPa
+                    <br>
+                    Max: ${_latestReading.getMaxPressure()} hPa
+                    <br>
+                    Min: ${_latestReading.getMinPressure()} hPa
+                    <br>
+                    <br>
+                    <br>
+                </div>
             </div>
-        </div>
 
+        </div>
     </div>
-</div>
-
+#{/if}
+#{else}
+<p> Add a reading to see the latest reading dashboard.</p>
+#{/else}
